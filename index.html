@@ -5,20 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./resources/style.css" />
-
     <title>Personal Portfolio</title>
   </head>
+
+
+  <!-- B O D Y-->
+
   <body>
     <header>
       <nav>
         <div class="container">
           <h2>Maksymilian Wojnowski</h2>
           <div class="menu">
-            <a href="#" class="is-active">About</a>
-            <a href="#" >Skillset</a>
-            <a href="#" >Projects</a>
-            <a href="#" >Education</a>
-            <a href="#" >Contact</a>
+            <a href="#home" class="is-active">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#">Contact</a>
           </div>
           <button class="hamburger-menu-icon" aria-label="menu">
             <span></span>
@@ -28,32 +30,105 @@
         </div>
       </nav>
       <div class="mobile-nav">
-        <a href="#" class="is-active">About</a>
-        <a href="#" >Skillset</a>
-        <a href="#" >Projects</a>
-        <a href="#" >Education</a>
-        <a href="#" >Contact</a>
-    </div>
+        <a href="#home" class="is-active">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#">Contact</a>
+      </div>
     </header>
 
-    <div class="about">
+    <div class="home" id="home">
         <div class="text-container">
-            <h1>Hi, <br>I am a  Computer Science student at <a href="https://pwr.edu.pl/en/" target="_blank" rel="noopener" >WUST.</a><br> <span class="magic">Future</span> full-stack developer</h1>
+          <h1>
+            <span class="magic">Hi</span>, <br/>I am Maksymilian <br>
+            <span class="magic">Future</span> full-stack developer
+          </h1>
         </div>
-        
-        <div class="img-container">
-            <img src="./resources/imagines/me.jpg" alt="portrait photo" id="portrait-photo">
+        <!--
+          <div class="img-container">
+          <img
+            src="./resources/imagines/me.jpg"
+            alt="portrait photo"
+            id="portrait-photo"
+          />
         </div>
+
+
+
+        -->
+
+    </div>
     
-        
-        
+
+    <div class="about" id="about">
+      <div class="about-container">
+        <h3 class="subtitle"><span class="magic">About Me</span></h3>
+        <div class="row">
+           
+            <p>
+              I am a Computer Science  at <a class="wust" href="https://pwr.edu.pl/en/" target="_blank" rel="noopener"
+              >WUST</a> based in Wrocław, Poland looking for my first internship. <br>
+              I am a hard working, honest individual. I am a good timekeeper, always willing to learn new skills. <br>
+              am friendly, helpful and polite, have a good sense of humour. I am able to work independently in busy environments and also within a team setting. <br>
+              I am outgoing and tactful, and able to listen effectively when solving problems.
+
+            </p>
+            <div class="tab-titles">
+              <a class="tab-links active-link" onclick="opentab('skills')">Skills</a>
+              <a class="tab-links" onclick="opentab('languages')">Languages</a>
+              <a class="tab-links" onclick="opentab('education')">Education</a>
+              <a class="tab-links" onclick="opentab('expierience')">Expierience</a>
+            </div>
+            <div class="tab-contents">
+              <div class="tab active-tab" id="skills">
+                
+                  <ul>
+                    <li><span class="tab-contents-header">HTML</span><br>Placeholder Placeholder Placeholder Placeholder</li>
+                    <li><span class="tab-contents-header">CSS</span> <br>Placeholder Placeholder Placeholder Placeholder</li>
+                    <li><span class="tab-contents-header">JavaScript</span><br>Placeholder Placeholder Placeholder Placeholder</li>
+                    <li><span class="tab-contents-header">C++</span><br>Placeholder Placeholder Placeholder Placeholder</li>
+                    <li><span class="tab-contents-header">Python</span><br>Placeholder Placeholder Placeholder Placeholder</li>
+                  </ul>
+                
+              </div>
+              <div class="tab" id="expierience">
+                
+                  <ul>
+                    <li><span class= "magic">Lookng forward to filling this tab :)</span><br></li>
+                  </ul>
+                
+              </div>
+              <div class="tab" id="languages">
+                
+                  <ul>
+                    <li><span class="tab-contents-header">Polish</span><br>Native speaker</li>
+                    <li><span class="tab-contents-header">English</span><br>Advanced (B2+ certified)</li>
+                    <li><span class="tab-contents-header">Spanish</span><br>Pre intermediate (A1+ certified)</li>
+                    <li><span class="tab-contents-header">German</span><br>Begginer</li>
+                  </ul>
+                
+              </div>
+              <div class="tab" id="education">
+                
+                  <ul>
+                    <li><span class="tab-contents-header">Profiled High School (2019-2022)</span><br><a class="wust" href="https://norwid.net/" target="_blank" rel="noopener"
+                      >IX LO NORWID</a><br> Profile: Computer Science and Math  </li>
+                    <li><span class="tab-contents-header">University (2022-now)</span><br><a class="wust" href="https://pwr.edu.pl/en/" target="_blank" rel="noopener"
+                      >Wroclaw University of Technology</a> <br>Major: Computer Science and Computer Engineering</li>
+                  </ul>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-
-
-
-
-
+      <div id="projects">
+        <div class="projects-container">
+          <h3 class="subtitle"><span class="magic">Projects</span></h3>
+        </div>
+      </div>
 
 
 

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./resources/style.css" />
     <title>Personal Portfolio</title>
+    <script src="https://kit.fontawesome.com/0bfb9e3e18.js" crossorigin="anonymous"></script>
   </head>
 
 
@@ -17,10 +18,14 @@
         <div class="container">
           <h2>Maksymilian Wojnowski</h2>
           <div class="menu">
-            <a href="#home" class="is-active">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
+            <a href="#home" class="is-active" onclick="openHome()">Home</a>
+            <a href="#about" onclick="openAbout()">About</a>
+            <a href="#projects" onclick="openProjects()">Projects</a>
             <a href="#">Contact</a>
+            <label class="switch">
+              <input type="checkbox" title="theme">
+              <span class="slider round" id="theme"></span>
+            </label>
           </div>
           <button class="hamburger-menu-icon" aria-label="menu">
             <span></span>
@@ -30,10 +35,17 @@
         </div>
       </nav>
       <div class="mobile-nav">
-        <a href="#home" class="is-active">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#">Contact</a>
+        <a href="#home" class="mobileMenuButton is-active" onclick="hideMenu() ; openHome()">Home</a>
+        <a href="#about" class="mobileMenuButton" onclick="hideMenu() ; openAbout()">About</a>
+        <a href="#projects" class="mobileMenuButton" onclick="hideMenu() ; openProjects()">Projects</a>
+        <a href="#" class="mobileMenuButton" onclick="hideMenu()">Contact</a>
+        <div class="wrapper">
+          <label class="switch">
+            <input type="checkbox" title="theme-mobile">
+            <span class="slider round" id="theme-mobile"></span>
+          </label>
+        </div>
+
       </div>
     </header>
 
@@ -83,11 +95,11 @@
               <div class="tab active-tab" id="skills">
                 
                   <ul>
-                    <li><span class="tab-contents-header">HTML</span><br>Placeholder Placeholder Placeholder Placeholder</li>
-                    <li><span class="tab-contents-header">CSS</span> <br>Placeholder Placeholder Placeholder Placeholder</li>
-                    <li><span class="tab-contents-header">JavaScript</span><br>Placeholder Placeholder Placeholder Placeholder</li>
-                    <li><span class="tab-contents-header">C++</span><br>Placeholder Placeholder Placeholder Placeholder</li>
-                    <li><span class="tab-contents-header">Python</span><br>Placeholder Placeholder Placeholder Placeholder</li>
+                    <li><span class="tab-contents-header">HTML</span><br>Placeholder Placeholder Placeholder</li>
+                    <li><span class="tab-contents-header">CSS</span> <br>Placeholder Placeholder Placeholder </li>
+                    <li><span class="tab-contents-header">JavaScript</span><br>Placeholder Placeholder Placeholder</li>
+                    <li><span class="tab-contents-header">C++</span><br>Placeholder Placeholder Placeholder </li>
+                    <li><span class="tab-contents-header">Python</span><br>Placeholder Placeholder Placeholder </li>
                   </ul>
                 
               </div>
@@ -114,7 +126,7 @@
                     <li><span class="tab-contents-header">Profiled High School (2019-2022)</span><br><a class="wust" href="https://norwid.net/" target="_blank" rel="noopener"
                       >IX LO NORWID</a><br> Profile: Computer Science and Math  </li>
                     <li><span class="tab-contents-header">University (2022-now)</span><br><a class="wust" href="https://pwr.edu.pl/en/" target="_blank" rel="noopener"
-                      >Wroclaw University of Technology</a> <br>Major: Computer Science and Computer Engineering</li>
+                      >Wroclaw University of Technology</a> <br>Major: <br> Computer Science and Computer Engineering</li>
                   </ul>
                 
               </div>
@@ -127,6 +139,25 @@
       <div id="projects">
         <div class="projects-container">
           <h3 class="subtitle"><span class="magic">Projects</span></h3>
+          <div class="work-list">
+            <div class="work">
+              <img src="./resources/imagines/jeremy-thomas-E0AHdsENmDg-unsplash.jpg" alt="img">
+              <div class="layer">
+                <h3>Placeholder</h3>
+                <p>Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder </p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square" title="project-1"></i></a>
+              </div>
+            </div>
+            <div class="work">
+              <img src="./resources/imagines/marek-piwnicki-IlZ7x4Tbs_c-unsplash.jpg" alt="img">
+              <div class="layer">
+                <h3>Placeholder</h3>
+                <p>Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder </p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square" title="project-2"></i></a>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn">See more</a>
         </div>
       </div>
 

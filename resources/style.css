@@ -201,7 +201,6 @@ h2 {
   height: 34px;
 }
 
-
 .switch input {
   opacity: 0;
   width: 0;
@@ -241,12 +240,11 @@ input:focus + .slider {
   box-shadow: 0 0 1px var(--dark);
 }
 
-input:checked + .slider:before{
+input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
-
 
 .slider.round {
   border-radius: 34px;
@@ -344,6 +342,7 @@ input:checked + .slider:before{
   height: 100vh;
   display: flex;
   justify-content: center;
+  overflow-y: auto;
 }
 
 .subtitle {
@@ -459,84 +458,206 @@ input:checked + .slider:before{
   width: 100%;
   height: 100vh;
   color: var(--light);
+  overflow-y: auto;
 }
-.work-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap:  40px;
-    margin-top: 50px;
-    margin-left:  10px;
-    margin-right: 10px;
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 40px;
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 40px;
 }
-.work{
-    border-radius: 10%;
-    position: relative;
-    overflow: hidden;
-}
-
-.work img{
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-    transition: transform 0.4s;
-}
-.work:hover img{
-    transform: scale(1.1);
+.work {
+  border-radius: 10%;
+  position: relative;
+  overflow: hidden;
 }
 
-.layer{
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), var(--primary));
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 1rem;
-    transition: height 0.5s;
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.4s;
 }
-.layer h3{
-    font-weight: 500;
-    margin-bottom: 20px;
+.work:hover img {
+  transform: scale(1.1);
 }
-.layer a{
-    margin-top: 20px;
-    color: var(--primary);
-    text-decoration: none;
-    font-size: 1rem;
-    line-height: 60px;
-    background-color: var(--light);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-}
-.work:hover .layer{
-    height: 100%;
-}
-.btn{
-    display: block;
-    margin: 50px auto;
-    width: -moz-fit-content;
-    width: fit-content;
-    border: 1px solid var(--primary);
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: var(--light);
-    transition: background 0.4s;
-}
-.btn:hover{
-    background-color: var(--primary);
 
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), var(--primary));
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 1rem;
+  transition: height 0.5s;
 }
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.layer a {
+  margin-top: 20px;
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 60px;
+  background-color: var(--light);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+.work:hover .layer {
+  height: 100%;
+}
+.btn {
+  color: var(--light);
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 8px 16px;
+  border-radius: 99px;
+}
+.btn:hover {
+  background-color: var(--primary);
+}
+
+/* --------------------------------------------------------- */
+/*  C O N T A C T S  */
+/* --------------------------------------------------------- */
+
+@keyframes float {
+  from,
+  to {
+    transform: translateY(-0%);
+  }
+
+  50% {
+    transform: translateY(-3%);
+  }
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 1000% center;
+  }
+
+  to {
+    background-position: 0% center;
+  }
+}
+
+#contacts {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  top: 100%;
+  margin: 0 auto;
+  padding-top: 60px;
+  width: 100%;
+  height: 100vh;
+  color: var(--light);
+  overflow-y: auto;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 50vh;
+  width: 50vh;
+  margin: 0 auto;
+}
+.line {
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+}
+.word {
+  text-transform: uppercase;
+  color: var(--light);
+  font-size: 5rem;
+  margin: 0rem;
+  transition: opacity 250ms ease;
+}
+#contact-info:has(.fancy:hover) .word:not(.fancy:hover) {
+  opacity: 0.2;
+}
+
+.fancy span {
+  display: inline-block;
+}
+
+.fancy > .outer {
+  transition: transform 350ms ease;
+}
+
+.fancy:hover > .outer {
+  transition-duration: 800ms;
+}
+
+.fancy:hover > .outer > .inner {
+  animation: float 5s ease infinite;
+}
+
+.fancy:hover > .outer > .inner > .letter {
+  background: linear-gradient(
+    to right,
+    var(--purple),
+    var(--pink),
+    var(--violet)
+  );
+  background-size: 1000%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: background-pan 150s linear infinite;
+}
+
+.fancy:hover > .outer:nth-child(1) {
+  transform: translate(-80%, 60%) rotate(8deg);
+}
+
+.fancy:hover > .outer:nth-child(2) {
+  transform: translate(-40%, 20%) rotate(4deg);
+}
+
+.fancy:hover > .outer:nth-child(3) {
+  transform: translate(-10%, 60%) rotate(-6deg);
+}
+
+.fancy:hover > .outer:nth-child(4) {
+  transform: translate(0%, 8%) rotate(-8deg);
+}
+
+.fancy:hover > .outer:nth-child(5) {
+  transform: translate(0%, -20%) rotate(5deg);
+}
+
+.fancy:hover > .outer:nth-child(6) {
+  transform: translate(0%, 20%) rotate(-3deg);
+}
+
+.fancy:hover > .outer:nth-child(7) {
+  transform: translate(0%, -40%) rotate(-5deg);
+}
+
 /* --------------------------------------------------------- */
 /*  M E D I A  */
 /* --------------------------------------------------------- */
@@ -603,5 +724,8 @@ input:checked + .slider:before{
   }
   .tab-titles {
     gap: 5px;
+  }
+  .word {
+    font-size: 2rem;
   }
 }

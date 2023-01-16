@@ -11,6 +11,7 @@ const hideMenu = () =>{
 const about = document.getElementById("about");
 const home = document.getElementById("home");
 const projects = document.getElementById("projects");
+const contacts = document.getElementById("contacts");
 const openAbout = () => {
   about.style.display = "flex";
   about.style.top = 0;
@@ -18,6 +19,8 @@ const openAbout = () => {
   home.style.top = "100%";
   projects.style.display = "none";
   projects.style.top = "100%";
+  contacts.style.display = "none";
+  contacts.style.top = "100%";
 }
 const openHome = () => {
   home.style.display = "flex";
@@ -26,6 +29,8 @@ const openHome = () => {
   about.style.top = "100%";
   projects.style.display = "none";
   projects.style.top = "100%";
+  contacts.style.display = "none";
+  contacts.style.top = "100%";
 }
 const openProjects = () =>{
   projects.style.display = "flex";
@@ -34,7 +39,23 @@ const openProjects = () =>{
   about.style.top = "100%";
   home.style.display = "none";
   home.style.top = "100%";
+  contacts.style.display = "none";
+  contacts.style.top = "100%";
 }
+
+const openContacts = () =>{
+  contacts.style.display = "flex";
+  contacts.style.top = 0;
+  projects.style.display = "none";
+  projects.style.top = "100%";
+  about.style.display = "none";
+  about.style.top = "100%";
+  home.style.display = "none";
+  home.style.top = "100%";
+}
+
+
+
 
 const theme = document.getElementById('theme');
 theme.addEventListener("click", function(){
@@ -64,3 +85,40 @@ const opentab = tabname => {
 }
 
 
+const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+const enhance = id => {
+  const element = document.getElementById(id),
+        text = element.innerText.split("");
+  
+  element.innerText = "";
+  
+  text.forEach((value, index) => {
+    const outer = document.createElement("span");
+    
+    outer.className = "outer";
+    
+    const inner = document.createElement("span");
+    
+    inner.className = "inner";
+    
+    inner.style.animationDelay = `${rand(-5000, 0)}ms`;
+    
+    const letter = document.createElement("span");
+    
+    letter.className = "letter";
+    
+    letter.innerText = value;
+    
+    letter.style.animationDelay = `${index * 1000 }ms`;
+    
+    inner.appendChild(letter);    
+    
+    outer.appendChild(inner);    
+    
+    element.appendChild(outer);
+  });
+}
+
+enhance("linkedin");
+enhance("github");

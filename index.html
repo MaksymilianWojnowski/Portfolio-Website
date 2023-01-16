@@ -21,7 +21,7 @@
             <a href="#home" class="is-active" onclick="openHome()">Home</a>
             <a href="#about" onclick="openAbout()">About</a>
             <a href="#projects" onclick="openProjects()">Projects</a>
-            <a href="#">Contact</a>
+            <a href="#contact" onclick="hideMenu() ; openContacts()">Contact</a>
             <label class="switch">
               <input type="checkbox" title="theme">
               <span class="slider round" id="theme"></span>
@@ -38,7 +38,7 @@
         <a href="#home" class="mobileMenuButton is-active" onclick="hideMenu() ; openHome()">Home</a>
         <a href="#about" class="mobileMenuButton" onclick="hideMenu() ; openAbout()">About</a>
         <a href="#projects" class="mobileMenuButton" onclick="hideMenu() ; openProjects()">Projects</a>
-        <a href="#" class="mobileMenuButton" onclick="hideMenu()">Contact</a>
+        <a href="#contacts" class="mobileMenuButton" onclick="hideMenu() ; openContacts()">Contact</a>
         <div class="wrapper">
           <label class="switch">
             <input type="checkbox" title="theme-mobile">
@@ -156,11 +156,66 @@
                 <a href="#"><i class="fa-solid fa-arrow-up-right-from-square" title="project-2"></i></a>
               </div>
             </div>
+            <div class="work">
+              <img src="./resources/imagines/patrick-fore-HVFYFns30-I-unsplash.jpg" alt="img">
+              <div class="layer">
+                <h3>Placeholder</h3>
+                <p>Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder </p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square" title="project-2"></i></a>
+              </div>
+            </div>            
+            <div class="work">
+              <img src="./resources/imagines/shlomo-shalev-l_U28brNp7g-unsplash.jpg" alt="img">
+              <div class="layer">
+                <h3>Placeholder</h3>
+                <p>Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder </p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square" title="project-2"></i></a>
+              </div>
+            </div>    
           </div>
-          <a href="#" class="btn">See more</a>
+          
         </div>
       </div>
+      
+      <div id="contacts">
+        <h3 class="subtitle"><span class="magic">Contacts</span></h3>
+        <div class="contact-info" id="contact-info">
+          <div class="line">
+            <p class="word">Contact</p>
+            <p class="word">Me</p>
+          </div>
+          
+          <div class="line">
+            <p class="word">Via</p>
+            <a 
+             id="linkedin" 
+             href="https://www.linkedin.com/in/maksymilian-wojnowski-647585254/" 
+             target="_blank" 
+             class="word fancy"
+             rel="noopener"
+          >linkedin
+          </a>
+          </div>
+          <div class="line">
+            <p class="word">And</p>
+            <p class="word">Vistit</p>
+          </div>
+          
+          <div class="line">
+            <p class="word">My</p>
+            <a 
+              id="github" 
+               href="https://github.com/MaksymilianWojnowski" 
+               target="_blank" 
+               class="word fancy"
+               rel="noopener"
+            >Github
+            </a>
+          </div>
+        </div>
 
+      </div>
+      </div>
 
 
     <script src="./main.js"></script>

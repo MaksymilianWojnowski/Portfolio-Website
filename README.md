@@ -35,4 +35,12 @@ This was a website build as a template for future projects.
 
 ![image](https://user-images.githubusercontent.com/119015858/212698673-34a2d395-bdbd-4652-839b-2b80b95452b1.png)
 
+# Light Theme
 
+![image](https://user-images.githubusercontent.com/119015858/212748684-ac9fa0a2-c1e7-4566-89cf-0c17689a6ce5.png)
+
+![image](https://user-images.githubusercontent.com/119015858/212748707-d2a4afea-428b-4f30-8f43-e24102ef921f.png)
+
+![image](https://user-images.githubusercontent.com/119015858/212748737-2ea914aa-0718-4f08-9984-246a06f2dbfc.png)
+
+![image](https://user-images.githubusercontent.com/119015858/212748764-506e43a0-b967-4205-abab-f0dcbbee997f.png)

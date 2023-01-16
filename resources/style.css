@@ -582,7 +582,7 @@ input:checked + .slider:before {
   flex-direction: column;
   flex-wrap: wrap;
   height: 50vh;
-  width: 50vh;
+  width: 70%;
   margin: 0 auto;
 }
 .line {
@@ -728,4 +728,14 @@ input:checked + .slider:before {
   .word {
     font-size: 2rem;
   }
+}
+@media (max-width: 1200px){
+    .word{
+        font-size: 1.75rem;
+    }
+}
+@media (max-width: 400px){
+    .word{
+        font-size: 1.5rem;
+    }
 }

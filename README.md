@@ -43,4 +43,4 @@ This was a website build as a template for future projects.
 
 ![image](https://user-images.githubusercontent.com/119015858/212748737-2ea914aa-0718-4f08-9984-246a06f2dbfc.png)
 
-![image](https://user-images.githubusercontent.com/119015858/212748764-506e43a0-b967-4205-abab-f0dcbbee997f.png)
+![image](https://user-images.githubusercontent.com/119015858/212752033-2bac98e8-6095-40b6-af5f-aff1a2e1c969.png)

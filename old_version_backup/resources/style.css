@@ -606,6 +606,7 @@ input:checked + .slider:before {
   margin: 0rem;
   transition: opacity 250ms ease;
 }
+
 #contact-info:has(.fancy:hover) .word:not(.fancy:hover) {
   opacity: 0.2;
 }

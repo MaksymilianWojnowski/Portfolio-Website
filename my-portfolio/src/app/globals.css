@@ -1,0 +1,48 @@
+/* globals.css */
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #ae38ff;
+  --light: #eeeeee;
+  --dark: black;
+  --purple: rgb(123, 31, 162);
+  --violet: rgb(103, 58, 193);
+  --pink: rgb(244, 143, 177);
+}
+
+/* Dark mode overrides when <html> has .dark */
+.dark {
+  --primary: #ae38ff;
+  --light: black;
+  --dark: #eeeeee;
+}
+
+
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+
+
+.magic {
+  font-weight: 700; /* Instead of @apply font-bold */
+  background: linear-gradient(
+    to right,
+    #7B1FA2,
+    #673AC1,
+    #F48FB1
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: background-pan 3s linear infinite;
+}

@@ -7,8 +7,8 @@ export default function HomeSection() {
       className="
         h-screen
         w-full
-        bg-white dark:bg-black
-        text-black dark:text-white
+        bg-light dark:bg-dark
+        text-dark dark:text-light
         flex
         flex-col
         items-center

@@ -2,7 +2,7 @@
 
 export default function ContactSection() {
   return (
-    <div id="contacts" className="min-h-screen w-full bg-white dark:bg-black text-black dark:text-white py-16 px-4 flex flex-col items-center">
+    <div id="contacts" className="min-h-screen w-full bg-light dark:bg-dark text-dark dark:text-light py-16 px-4 flex flex-col items-center">
       <h3 className="text-5xl font-bold mb-8 magic text-center">
         <span className="magic">Contacts</span>
       </h3>

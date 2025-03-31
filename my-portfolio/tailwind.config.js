@@ -4,11 +4,7 @@ module.exports = {
     // Include paths where you use Tailwind (JSX/TSX)
     "./src/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./public/**/*.{html,js}",
-    // Include paths for HTML files
-    "./public/**/*.html",
+
   ],
   // remove `purge: []` entirely
   // ...
@@ -27,5 +23,5 @@ module.exports = {
     },
   },
   plugins: [],
-  darkMode: "media",
+  darkMode: "class",
 };

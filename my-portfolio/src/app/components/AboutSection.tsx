@@ -13,8 +13,8 @@ export default function AboutSection() {
       className="
         min-h-screen
         w-full
-        bg-white dark:bg-black
-        text-black dark:text-white
+        bg-light dark:bg-dark
+        text-dark dark:text-light
         py-16
         px-4
         flex
@@ -22,7 +22,7 @@ export default function AboutSection() {
         items-center
       "
     >
-      <h3 className="magic text-5xl font-semibold mb-8 text-center text-black dark:text-white">
+      <h3 className="magic text-5xl font-semibold mb-8 text-center text-dark dark:text-light">
         About Me
       </h3>
 
@@ -30,7 +30,7 @@ export default function AboutSection() {
         <p className="mb-6 text-lg leading-relaxed">
           Motivated Computer Science student at {" "}
           <a
-            className="underline decoration-primary hover:text-primary text-black dark:text-white"
+            className="underline decoration-primary hover:text-primary text-dark dark:text-light"
             href="https://pwr.edu.pl/en/"
             target="_blank"
             rel="noopener noreferrer"
@@ -59,14 +59,14 @@ export default function AboutSection() {
             px-6
             py-4
             border
-            border-violet-500
+            border-primary
             rounded-xl
             shadow-md
-            shadow-primary
+            shadow-[theme(colors.primary)]
             text-left
             mx-auto
             max-w-md
-            bg-white/60 dark:bg-white/10
+            bg-light/60 dark:bg-light/10
             backdrop-blur
           "
         >
@@ -140,8 +140,8 @@ function TabButton({
         transition-colors duration-200
         ${
           isActive
-            ? "bg-violet-500 text-white"
-            : "text-black dark:text-white border border-black dark:border-white hover:bg-violet-500 hover:text-white"
+            ? "bg-primary text-white"
+            : "text-dark dark:text-light border border-dark dark:border-light hover:bg-primary hover:text-white"
         }
       `}
     >

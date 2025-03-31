@@ -5,7 +5,7 @@ import ContactSection from "./components/ContactSection";
 
 export default function Page() {
   return (
-    <main className="pt-[80px]">
+    <main className="pt-[80px] bg-light text-dark dark:bg-dark dark:text-light">
       {/* offset top so content isn't hidden under Navbar */}
       <HomeSection />
       <AboutSection />

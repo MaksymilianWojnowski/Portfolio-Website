@@ -1,4 +1,3 @@
-// app/layout.tsx
 import Navbar from "./components/Navbar";
 import "./globals.css"; // includes @tailwind directives
 
@@ -13,8 +12,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="bg-dark text-light">
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <body className="bg-light text-dark dark:bg-dark dark:text-light">
         <Navbar />
         {children}
       </body>

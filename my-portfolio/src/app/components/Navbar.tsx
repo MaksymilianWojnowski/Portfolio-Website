@@ -1,45 +1,61 @@
 "use client";
 
 import { useState } from "react";
+import { useEffect } from "react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [themeOn, setThemeOn] = useState(false);
 
-  const toggleTheme = () => {
-    setThemeOn(!themeOn);
-    // Toggle a class on the document's root element.
-    if (!themeOn) {
+  useEffect(() => {
+    const theme = localStorage.getItem("theme");
+    if (theme === "dark") {
       document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
+      setThemeOn(true);
     }
+  }, []);
+
+
+
+  const toggleTheme = () => {
+    setThemeOn((prev) => {
+      const newTheme = !prev;
+      if (newTheme) {
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+      }
+      return newTheme;
+    });
   };
 
+  
   return (
-    <nav className="w-full bg-dark border-b-4 border-primary fixed top-0 left-0 z-50">
-      <div className="max-w-screen-xl mx-auto px-4 py-4 flex items-center justify-between">
-        <h2 className="text-light text-xl md:text-2xl font-black tracking-widest uppercase">
+    <nav className="w-full bg-white dark:bg-black text-black dark:text-white border-b-4 border-violet-500 fixed top-0 left-0 z-50">
+      <div className="max-w-screen-xl mx-auto px-4 py-4 flex items-center justify-between ">
+        <h2 className="text-black dark:text-white text-xl md:text-2xl font-black tracking-widest uppercase ">
           Maksymilian Wojnowski
         </h2>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex md:items-center space-x-4 font-semibold">
-          <a href="#home" className="hover:bg-primary px-4 py-2 rounded-full">
+        <div className="hidden md:flex md:items-center space-x-4 font-semibold gap-10">
+          <a href="#home" className="hover:bg-violet-500 px-4 py-2 rounded-full hover:text-white transition-colors">
             Home
           </a>
-          <a href="#about" className="hover:bg-primary px-4 py-2 rounded-full">
+          <a href="#about" className="hover:bg-violet-500 px-4 py-2 rounded-full hover:text-white transition-colors">
             About
           </a>
           <a
             href="#projects"
-            className="hover:bg-primary px-4 py-2 rounded-full"
+            className="hover:bg-violet-500 px-4 py-2 rounded-full hover:text-white transition-colors"
           >
             Projects
           </a>
           <a
             href="#contacts"
-            className="hover:bg-primary px-4 py-2 rounded-full"
+            className="hover:bg-violet-500 px-4 py-2 rounded-full hover:text-white transition-colors"
           >
             Contact
           </a>
@@ -65,17 +81,17 @@ export default function Navbar() {
           aria-label="Toggle Menu"
         >
           <span
-            className={`w-8 h-1 bg-light rounded transition-all ${
+            className={`w-8 h-1 bg-black dark:bg-white rounded transition-all ${
               menuOpen ? "rotate-45 translate-y-2" : ""
             }`}
           ></span>
           <span
-            className={`w-8 h-1 bg-light rounded transition-all ${
+            className={`w-8 h-1 bg-black dark:bg-white rounded transition-all ${
               menuOpen ? "opacity-0" : ""
             }`}
           ></span>
           <span
-            className={`w-8 h-1 bg-light rounded transition-all ${
+            className={`w-8 h-1 bg-black dark:bg-white rounded transition-all ${
               menuOpen ? "-rotate-45 -translate-y-2" : ""
             }`}
           ></span>
@@ -84,31 +100,31 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-dark w-full px-4 pb-4 flex flex-col items-center space-y-2 font-semibold">
+        <div className="md:hidden bg-white dark:bg-black w-full px-4 pb-4 flex flex-col items-center space-y-2 font-semibold">
           <a
             href="#home"
-            className="hover:bg-primary w-full text-center py-2 rounded-full"
+            className="hover:bg-violet-500 w-full text-center py-2 rounded-full hover:text-white transition-colors"
             onClick={() => setMenuOpen(false)}
           >
             Home
           </a>
           <a
             href="#about"
-            className="hover:bg-primary w-full text-center py-2 rounded-full"
+            className="hover:bg-violet-500 w-full text-center py-2 rounded-full hover:text-white transition-colors"
             onClick={() => setMenuOpen(false)}
           >
             About
           </a>
           <a
             href="#projects"
-            className="hover:bg-primary w-full text-center py-2 rounded-full"
+            className="hover:bg-violet-500 w-full text-center py-2 rounded-full hover:text-white transition-colors"
             onClick={() => setMenuOpen(false)}
           >
             Projects
           </a>
           <a
             href="#contacts"
-            className="hover:bg-primary w-full text-center py-2 rounded-full"
+            className="hover:bg-violet-500 w-full text-center py-2 rounded-full hover:text-white transition-colors"
             onClick={() => setMenuOpen(false)}
           >
             Contact
@@ -121,6 +137,7 @@ export default function Navbar() {
                 title="theme-mobile"
                 checked={themeOn}
                 onChange={toggleTheme}
+                id="theme"
               />
               <span
                 className={`slider round ${themeOn ? "checked" : ""}`}

@@ -1,56 +1,70 @@
 "use client";
 
-import { useState } from "react";
-
-export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [themeOn, setThemeOn] = useState(false);
-
-  const toggleTheme = () => {
-    setThemeOn((prev) => !prev);
-    if (!themeOn) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  };
-
+export default function ContactSection() {
   return (
-    <nav className="w-full bg-dark border-b-4 border-primary fixed top-0 left-0 z-50">
-      <div className="max-w-screen-xl mx-auto px-4 py-4 flex items-center justify-between">
-        <h2 className="text-light text-xl md:text-2xl font-black tracking-widest uppercase">
-          Maksymilian Wojnowski
-        </h2>
-        {/* Desktop Menu */}
-        <div className="hidden md:flex md:items-center space-x-4 font-semibold">
-          <a href="#home" className="hover:bg-primary px-4 py-2 rounded-full">
-            Home
-          </a>
-          <a href="#about" className="hover:bg-primary px-4 py-2 rounded-full">
-            About
-          </a>
-          <a href="#projects" className="hover:bg-primary px-4 py-2 rounded-full">
-            Projects
-          </a>
-          <a href="#contacts" className="hover:bg-primary px-4 py-2 rounded-full">
-            Contact
-          </a>
-          {/* Desktop Theme Switch */}
-          <label className="switch">
-            <input
-              type="checkbox"
-              title="theme"
-              checked={themeOn}
-              onChange={toggleTheme}
-            />
-            <span
-              className={`slider round ${themeOn ? "checked" : ""}`}
-              id="theme"
-            ></span>
-          </label>
+    <div id="contacts" className="min-h-screen w-full bg-white dark:bg-black text-black dark:text-white py-16 px-4 flex flex-col items-center">
+      <h3 className="text-5xl font-bold mb-8 magic text-center">
+        <span className="magic">Contacts</span>
+      </h3>
+
+      <div className="contact-info">
+        <div className="line flex">
+          <p className="word">Contact</p>
+          <p className="word">Me</p> 
         </div>
-        {/* Hamburger button & Mobile Menu omitted for brevity */}
+
+        <div className="line flex">
+          <p className="word">Via</p>
+          <FancyLink
+            id="linkedin"
+            href="https://www.linkedin.com/in/maksymilian-wojnowski-647585254/"
+            text="linkedin"
+          />
+        </div>
+
+        <div className="line flex">
+          <p className="word">And</p>
+          <p className="word">Visit</p>
+        </div>
+
+        <div className="line flex">
+          <p className="word ">My</p>
+          <FancyLink
+            id="github"
+            href="https://github.com/MaksymilianWojnowski"
+            text="Github"
+          />
+        </div>
       </div>
-    </nav>
+    </div>
+  );
+}
+
+function FancyLink({
+  id,
+  href,
+  text,
+}: {
+  id: string;
+  href: string;
+  text: string;
+}) {
+  const letters = text.split("");
+  return (
+    <a
+      id={id}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="word fancy"
+    >
+      {letters.map((letter, index) => (
+        <span key={index} className="outer">
+          <span className="inner">
+            <span className="letter">{letter}</span>
+          </span>
+        </span>
+      ))}
+    </a>
   );
 }

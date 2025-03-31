@@ -13,8 +13,8 @@ export default function AboutSection() {
       className="
         min-h-screen
         w-full
-        bg-dark
-        text-light
+        bg-white dark:bg-black
+        text-black dark:text-white
         py-16
         px-4
         flex
@@ -22,7 +22,7 @@ export default function AboutSection() {
         items-center
       "
     >
-      <h3 className="magic text-5xl font-semibold mb-8 text-center">
+      <h3 className="magic text-5xl font-semibold mb-8 text-center text-black dark:text-white">
         About Me
       </h3>
 
@@ -30,7 +30,7 @@ export default function AboutSection() {
         <p className="mb-6 text-lg leading-relaxed">
           Motivated Computer Science student at {" "}
           <a
-            className="underline decoration-primary hover:text-primary"
+            className="underline decoration-primary hover:text-primary text-black dark:text-white"
             href="https://pwr.edu.pl/en/"
             target="_blank"
             rel="noopener noreferrer"
@@ -59,14 +59,14 @@ export default function AboutSection() {
             px-6
             py-4
             border
-            border-primary
+            border-violet-500
             rounded-xl
             shadow-md
             shadow-primary
             text-left
             mx-auto
             max-w-md
-            bg-[rgba(0,0,0,0.4)]
+            bg-white/60 dark:bg-white/10
             backdrop-blur
           "
         >
@@ -140,8 +140,8 @@ function TabButton({
         transition-colors duration-200
         ${
           isActive
-            ? "bg-primary text-dark"
-            : "text-light border border-light hover:bg-primary hover:text-dark"
+            ? "bg-violet-500 text-white"
+            : "text-black dark:text-white border border-black dark:border-white hover:bg-violet-500 hover:text-white"
         }
       `}
     >

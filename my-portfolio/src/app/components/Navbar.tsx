@@ -51,11 +51,17 @@ export default function Navbar() {
           >
             Skills
           </a>
-          <a
+          {/* <a
             href="#projects"
             className="hover:bg-primary px-4 py-2 rounded-full hover:text-white transition-colors"
           >
             Projects
+          </a> */}
+          <a
+            href="#education"
+            className="hover:bg-primary px-4 py-2 rounded-full hover:text-white transition-colors"
+          >
+            Education
           </a>
           <a
             href="#contacts"
@@ -108,19 +114,26 @@ export default function Navbar() {
           >
             About
           </a>
-          <a
+          {/* <a
             href="#projects"
             className="hover:bg-primary w-full text-center py-2 rounded-full hover:text-white transition-colors"
             onClick={() => setMenuOpen(false)}
           >
             Projects
-          </a>
+          </a> */}
           <a
             href="#skills"
             className="hover:bg-primary w-full text-center py-2 rounded-full hover:text-white transition-colors"
             onClick={() => setMenuOpen(false)}
           >
             Skills
+          </a>
+          <a
+            href="#education"
+            className="hover:bg-primary w-full text-center py-2 rounded-full hover:text-white transition-colors"
+            onClick={() => setMenuOpen(false)}
+          >
+            Education
           </a>
           <a
             href="#contacts"

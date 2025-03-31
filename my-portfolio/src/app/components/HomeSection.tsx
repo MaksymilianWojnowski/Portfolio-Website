@@ -24,6 +24,7 @@ export default function HomeSection() {
           <span className="magic font-bold">Computer Science</span> Student
         </h1>
       </div>
+      
     </section>
   );
 }

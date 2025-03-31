@@ -24,7 +24,7 @@ const projectsData: Project[] = [
     title: "Solve & Unite! International Hackathon",
     description: "Organizing an international hackathon event to enhance integration and collaboration between students.",
     imageUrl: "/images/unite-hackathon.jpg",
-    link: "#",
+    link: "https://unite.pwr.edu.pl/oferty/unite-seed-fund-ideathon-przeksztalc-pomysly-w-projekty-o-zasiegu-miedzynarodowym/",
   },
 ];
 

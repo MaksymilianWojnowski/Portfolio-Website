@@ -3,6 +3,7 @@ import AboutSection from "./components/AboutSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import SkillsSection from "./components/SkillsSection";
+import EducationSection from "./components/EducationSection";
 
 export default function Page() {
   return (
@@ -11,7 +12,8 @@ export default function Page() {
       <HomeSection />
       <AboutSection />
       <SkillsSection />
-      <ProjectsSection />
+      <EducationSection />
+      {/* <ProjectsSection /> */}
       <ContactSection />
     </main>
   );

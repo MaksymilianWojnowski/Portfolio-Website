@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useEffect } from "react";
+import Switcher from "./ThemeSwitcher";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -57,28 +58,7 @@ export default function Navbar() {
             Contact
           </a>
           {/* Desktop Theme Switch */}
-          <label className="themeSwitcherTwo relative inline-flex cursor-pointer select-none items-center">
-            <span className="label flex items-center text-sm font-medium text-black dark:text-light">Light</span>
-            <span
-              className={`slider mx-4 flex h-8 w-[60px] items-center rounded-full p-1 duration-200 ${
-                themeOn ? "bg-[#212b36]" : "bg-[#CCCCCE]"
-              }`}
-            >
-              <span
-                className={`dot h-6 w-6 rounded-full bg-white duration-200 ${
-                  themeOn ? "translate-x-[28px]" : ""
-                }`}
-              ></span>
-            </span>
-            <span className="label flex items-center text-sm font-medium text-black dark:text-light">Dark</span>
-            <input
-              type="checkbox"
-              title="theme"
-              checked={themeOn}
-              onChange={toggleTheme}
-              className="sr-only"
-            />
-          </label>
+          <Switcher/>
         </div>
 
         {/* Hamburger button */}

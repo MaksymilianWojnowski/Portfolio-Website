@@ -6,29 +6,16 @@ import Switcher from "./ThemeSwitcher";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [themeOn, setThemeOn] = useState(false);
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
-      setThemeOn(true);
+    } else {
+      document.documentElement.classList.remove("dark");
     }
   }, []);
-
-  const toggleTheme = () => {
-    setThemeOn((prev) => {
-      const newTheme = !prev;
-      if (newTheme) {
-        document.documentElement.classList.add("dark");
-        localStorage.setItem("theme", "dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-        localStorage.setItem("theme", "light");
-      }
-      return newTheme;
-    });
-  };
+  
 
   return (
     <nav className="w-full bg-light dark:bg-dark text-dark dark:text-light border-b-4 border-primary fixed top-0 left-0 z-50">

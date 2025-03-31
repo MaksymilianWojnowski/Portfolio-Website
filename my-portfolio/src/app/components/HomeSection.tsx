@@ -17,7 +17,7 @@ export default function HomeSection() {
     >
       <div className="text-center px-4">
         <h1 className="text-4xl sm:text-5xl font-light mb-4 leading-tight">
-          <span className="magic font-bold">Hi</span>, I'm Maksymilian
+          <span className="magic font-bold">Hi</span>, I&apos;m Maksymilian
           <br />
           <span className="magic font-bold">Front-End</span> Developer & 
           <br/>

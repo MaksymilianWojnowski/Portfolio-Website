@@ -46,6 +46,12 @@ export default function Navbar() {
             About
           </a>
           <a
+            href="#skills"
+            className="hover:bg-primary px-4 py-2 rounded-full hover:text-white transition-colors"
+          >
+            Skills
+          </a>
+          <a
             href="#projects"
             className="hover:bg-primary px-4 py-2 rounded-full hover:text-white transition-colors"
           >
@@ -110,6 +116,13 @@ export default function Navbar() {
             Projects
           </a>
           <a
+            href="#skills"
+            className="hover:bg-primary w-full text-center py-2 rounded-full hover:text-white transition-colors"
+            onClick={() => setMenuOpen(false)}
+          >
+            Skills
+          </a>
+          <a
             href="#contacts"
             className="hover:bg-primary w-full text-center py-2 rounded-full hover:text-white transition-colors"
             onClick={() => setMenuOpen(false)}
@@ -117,30 +130,9 @@ export default function Navbar() {
             Contact
           </a>
           {/* Mobile Theme Switch */}
-          <div className="wrapper">
-            <label className="themeSwitcherTwo relative inline-flex cursor-pointer select-none items-center">
-              <span className="label flex items-center text-sm font-medium text-black dark:text-light">Light</span>
-              <span
-                className={`slider mx-4 flex h-8 w-[60px] items-center rounded-full p-1 duration-200 ${
-                  themeOn ? "bg-[#212b36]" : "bg-[#CCCCCE]"
-                }`}
-              >
-                <span
-                  className={`dot h-6 w-6 rounded-full bg-white duration-200 ${
-                    themeOn ? "translate-x-[28px]" : ""
-                  }`}
-                ></span>
-              </span>
-              <span className="label flex items-center text-sm font-medium text-black dark:text-light">Dark</span>
-              <input
-                type="checkbox"
-                title="theme"
-                checked={themeOn}
-                onChange={toggleTheme}
-                className="sr-only"
-              />
-            </label>
-          </div>
+          <div className="flex justify-center items-center mt-4">
+            <Switcher />
+            </div>
         </div>
       )}
     </nav>

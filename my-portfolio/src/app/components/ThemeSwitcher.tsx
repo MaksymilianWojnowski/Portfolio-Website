@@ -23,7 +23,10 @@ const Switcher = () => {
         checked={isChecked}
         onChange={handleCheckboxChange}
         className="sr-only"
+        id="theme-switcher"
+        title="Toggle dark mode"
       />
+      <span className="sr-only">Toggle dark mode</span>
       <span className="label flex items-center text-sm font-medium text-dark dark:text-light">
       </span>
       <span

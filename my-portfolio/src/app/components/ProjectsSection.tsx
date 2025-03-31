@@ -9,18 +9,23 @@ interface Project {
 
 const projectsData: Project[] = [
   {
-    title: "Placeholder",
-    description: "Placeholder text about this project…",
-    imageUrl: "/images/placeholder-1.jpg",
-    link: "#"
+    title: "LigaPWr Web App",
+    description: "Web app for managing and visualizing sports league results using Django, HTML, and CSS.",
+    imageUrl: "/images/ligapwr-webapp.jpg",
+    link: "https://github.com/informatyzacja/LigaPWr",
   },
   {
-    title: "Another Placeholder",
-    description: "Some description here…",
-    imageUrl: "/images/placeholder-2.jpg",
-    link: "#"
+    title: "London Bike Rides Visualization",
+    description: "Interactive data visualization dashboard in Tableau with data preprocessing using Python.",
+    imageUrl: "/images/london-bike.jpg",
+    link: "https://github.com/MaksymilianWojnowski/London-bike-sharing-visualization",
   },
-  // Add your real projects
+  {
+    title: "Solve & Unite! International Hackathon",
+    description: "Organizing an international hackathon event to enhance integration and collaboration between students.",
+    imageUrl: "/images/unite-hackathon.jpg",
+    link: "#",
+  },
 ];
 
 export default function ProjectsSection() {
@@ -30,8 +35,8 @@ export default function ProjectsSection() {
       className="
         w-full
         min-h-screen
-        bg-dark
-        text-light
+        bg-light dark:bg-dark
+        text-dark dark:text-light
         py-16
         px-4
         flex
@@ -39,7 +44,7 @@ export default function ProjectsSection() {
         items-center
       "
     >
-      <h3 className="magic text-5xl font-semibold mb-8 text-center">
+      <h3 className="magic text-5xl font-semibold mb-8 pb-2 text-center">
         Projects
       </h3>
 
@@ -62,7 +67,7 @@ function ProjectCard({ project }: { project: Project }) {
         alt={title}
         className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
       />
-      {/* Overlay */}
+
       <div
         className="
           absolute 
@@ -92,7 +97,7 @@ function ProjectCard({ project }: { project: Project }) {
           target="_blank"
           rel="noopener noreferrer"
           className="
-            inline-block 
+            
             w-10 
             h-10 
             rounded-full 
@@ -107,13 +112,12 @@ function ProjectCard({ project }: { project: Project }) {
           "
           title={title}
         >
-          {/* Could be an SVG icon or just a link */}
           <svg
             className="w-5 h-5"
             viewBox="0 0 512 512"
             fill="currentColor"
           >
-            <path d="M320 0c-17.7... etc. " />
+            <path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" />
           </svg>
         </a>
       </div>

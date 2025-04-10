@@ -10,7 +10,7 @@ export default function AboutSection() {
         About Me
       </h3>
 
-      <div className="max-w-screen-md w-full text-center">
+      <div className="max-w-screen-md w-full text-justify">
         <p className="mb-8 text-lg leading-relaxed">
           Motivated and detail-oriented Computer Science student with practical experience in front-end development. Skilled in creating responsive web applications using React.js and Next.js. Passionate about designing user-friendly solutions and continuously improving technical proficiency. Additional strengths include event coordination and collaborative project management. Seeking opportunities to contribute to innovative projects that combine technology, user experience, and effective teamwork.
         </p>

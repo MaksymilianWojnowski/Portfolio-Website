@@ -10,11 +10,11 @@ export default function SkillsSection() {
         Skills & Languages
       </h3>
 
-      <div className="grid md:grid-cols-3 gap-8 max-w-6xl w-full">
+      <div className="grid md:grid-cols-3 gap-8 max-w-6xl w-full ">
         {/* Technical Skills */}
-        <div className="border border-primary rounded-xl shadow-md p-6 bg-light/60 dark:bg-light/10 backdrop-blur">
+        <div className="border border-primary rounded-xl shadow-md shadow-[theme(colors.primary)]  p-6 bg-light/60 dark:bg-light/10 backdrop-blur">
           <h4 className="text-2xl font-semibold text-primary mb-4">Technical Skills</h4>
-          <ul className="list-disc list-inside space-y-2">
+          <ul className="list-disc list-inside space-y-2 ">
             <li>HTML, CSS, JavaScript (ES6+)</li>
             <li>React.js, Next.js, PrimeReact</li>
             <li>Tailwind CSS</li>
@@ -25,7 +25,7 @@ export default function SkillsSection() {
         </div>
 
         {/* Soft Skills */}
-        <div className="border border-primary rounded-xl shadow-md p-6 bg-light/60 dark:bg-light/10 backdrop-blur">
+        <div className="border border-primary rounded-xl shadow-md shadow-[theme(colors.primary)]  p-6 bg-light/60 dark:bg-light/10 backdrop-blur">
           <h4 className="text-2xl font-semibold text-primary mb-4">Soft Skills</h4>
           <ul className="list-disc list-inside space-y-2">
             <li>Team Collaboration & Cooperation</li>
@@ -37,11 +37,11 @@ export default function SkillsSection() {
         </div>
 
         {/* Languages */}
-        <div className="border border-primary rounded-xl shadow-md p-6 bg-light/60 dark:bg-light/10 backdrop-blur">
+        <div className="border border-primary rounded-xl shadow-md shadow-[theme(colors.primary)] p-6 bg-light/60 dark:bg-light/10 backdrop-blur">
           <h4 className="text-2xl font-semibold text-primary mb-4">Languages</h4>
           <ul className="list-disc list-inside space-y-2">
             <li>Polish – Native</li>
-            <li>English – Advanced (B2+/C1)</li>
+            <li>English – Advanced (C1)</li>
             <li>Spanish – Pre-Intermediate (A1+)</li>
             <li>Japanese – Beginner</li>
           </ul>
